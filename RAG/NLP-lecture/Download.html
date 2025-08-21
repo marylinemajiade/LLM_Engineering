@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="nofollow">
+<meta name="google" content="notranslate">
+<meta name="description" content="OpenOlat - infinite learning">
+<meta name="keywords" content="OpenOlat, OLAT, eLearning, Lernplattform, LMS, Learning Management System, LCMS, Learning Content Management System, Open Source, elearning, JAVA, IMS, QTI, SCORM, Content package, Kollaboration, Usability, Performanz, Skalierbarkeit"> 
+<meta name="generator" content="OpenOlat 18.0.7 - https://www.openolat.org">
+<meta name="dcterms.type" content="Interactive Resource">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<script>
+var o_info = new Object();
+o_info.initialPageLoadFinished = false;
+o_info.version = '18.0.7';
+o_info.o_winid = '1218489425';
+window.name  = '1218489425';
+o_info.o_user = { identity : 2417492269, lastName : "Majiade", firstName : "Maryline"}; o_info.uriprefix="/auth/";
+o_info.bc="";
+o_info.businessPath="";
+o_info.startBusinessPath="";
+o_info.serverUri="https://olat.vcrp.de"
+o_info.dirty_form = "Achtung! Sie haben noch ungespeicherte Formulardaten. Wenn Sie OK drücken verlassen Sie das Formular ohne zu speichern. Die enthaltenen Änderungen gehen damit verloren.";
+o_info.locale = "de";
+o_info.lastClickTime = new Date().getTime();
+o_info.drop = true;
+o_info.o_baseURI = "/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/";
+o_info.i18n_noresponse_title = "Kommunikationsfehler";
+o_info.i18n_noresponse = "Die Aktion konnte nicht ausgeführt werden da der Server nicht antwortet oder überlastet ist. Versuchen Sie die Aktion erneut durchzuführen oder laden Sie die Seite neu.";
+o_info.oo_noresponse_title = "Sitzung abgelaufen";
+o_info.oo_noresponse = "Ihre Sitzung ist abgelaufen oder der Server wurde neu gestartet. Um sich erneut anzumelden, w\u00E4hlen Sie diesen <b><a href=\'reload.html\'>Link<\/a><\/b> oder laden Sie die Seite neu.<br><br>Bitte beachten Sie, dass alle ungespeicherten \u00C4nderungen in Ihrem Browserfenster beim erneuten Anmelden verloren gehen. Schliessen Sie diesen Dialog um ungespeicherte Forenbeitr\u00E4ge oder \u00E4hnliches jetzt in die Zwischenablage Ihres Browsers zu kopieren und anschliessend die Seite neu zu laden.";
+o_info.edusharing_enabled = true;
+o_info.zseed = 0;
+o_info.newWindow=null;
+o_info.submit=null;
+o_info.preventOnchange=false;
+o_info.latexit=false;
+if (top!=self){top.location=self.location+"?o_winrndo=1";}
+function o_start() {
+	o_init();
+		
+				o_info.initialPageLoadFinished = true;
+}
+
+
+
+
+try{
+	if(o_info.startBusinessPath != null && o_info.startBusinessPath.length > 0
+			&& window.history && !(typeof window.history === "undefined") && window.history.pushState) {
+		window.history.pushState('', document.title, o_info.startBusinessPath);
+		o_info.startBusinessPath = null;
+	}
+	if (document.location.href.indexOf('oow') != -1) {
+		window.history.replaceState(window.history.state, document.title, window.location.href.split("?")[0]);
+	}
+} catch(e) { }
+</script>
+
+<script>
+function o_mathjax(fct_success) {
+	if(window.MathJax === undefined) {
+		window.MathJax = {
+  tex: {
+    inlineMath: [['$$', '$$'], ['\\(', '\\)']],
+    macros: {
+      exponentialE: "\\mathrm{e}",
+      imaginaryI: "\\mathrm{i}",
+      differentialD: "\\mathrm{d}"
+    }
+  },
+  options: {
+    enableMenu: false,
+    processHtmlClass: 'tex2jax_process',
+    renderActions: {
+      findScripts: [11, function (doc) {
+        var nodes = document.querySelectorAll('.math');
+        for (var i=0; i<nodes.length; i++) {
+          var node = nodes[i];
+          var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], (node.tagName !== 'SPAN'));
+          var text = document.createTextNode('');
+          node.parentNode.replaceChild(text, node);
+          math.start = {node: text, delim: '', n: 0};
+          math.end = {node: text, delim: '', n: 0};
+          doc.math.push(math);
+        }
+      }, '']
+    }
+  }
+};
+;
+		jQuery.ajax("//mathjax.openolat.org/mathjax/3.2-latest/tex-mml-chtml.js", {
+			cache: true,
+			dataType: "script",
+			crossDomain: true,
+			success: function() {
+		    	if(typeof fct_success !== "undefined") {
+		    		fct_success();
+		    	}
+				o_info.latexit = false;
+			}
+		});
+	}
+}
+</script>
+
+<script src='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/js/jquery/jquery-3.7.0.min.js'></script>
+	<script src='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/js/js.plugins.min.js'></script>
+	<script src='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/movie/player.min.js'></script>
+	<script src='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/js/iframeResizer/iframeResizer.min.js'></script>
+
+	<link href='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/js/js.plugins.min.css' rel="stylesheet">
+<script>
+	jQuery.noConflict();
+	
+		jQuery(document).ooTranslator().initialize("/g/openolatorg.olat.core.commons.chiefcontrollers.JSTranslatorMapper");
+	o_info.oo_translator = jQuery(document).ooTranslator();
+		jQuery(window).on("popstate", function(e) {
+		if(e.originalEvent.state && e.originalEvent.state.businessPath) {
+			if (e.originalEvent.state.businessPath.indexOf('oow') == -1) {
+				var windowedPath = e.originalEvent.state.businessPath + '?oow=' + window.name;
+				window.history.replaceState(e.originalEvent.state, document.title, windowedPath);
+				window.location.reload();
+			} else {
+				window.location.href = e.originalEvent.state.businessPath;
+			}
+		}
+	});
+	
+	var closing = function(e) {
+		if(navigator.sendBeacon) {
+			var beaconUrl = '/auth/1%3A1%3A1218489427%3A2%3A0%3Acid%3Aclose-window%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/';
+			if(beaconUrl.indexOf("/dmz/") == -1) {
+				navigator.sendBeacon(beaconUrl, null);
+			}
+		}
+	};
+	window.onbeforeunload = closing;
+	window.onunload = closing;
+jQuery(function() {
+	if ((window.unsafeWindow == null ? window : unsafeWindow).MathJax == null) {
+		var count = jQuery('div.math,span.math,math,div.mathEntryInteraction').length;
+		if (count > 0) {
+		    o_mathjax();
+		}
+	}
+});
+</script>
+
+<script src="/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/js/jquery/ui/jquery-ui-1.13.2.dnd.resize.slider.min.js"></script>
+
+<link id='o_theme_css' href='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/themes/rptu/theme.css' rel='stylesheet'>
+<link rel='icon' href='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/themes/rptu/favicon.ico' type='image/x-icon'>
+<meta name='msapplication-TileColor' content='#ffffff'>
+
+	<script>
+        jQuery(document).ready(function() {
+            /* Detect IE below version 11 */
+            if (window.navigator.userAgent.indexOf('MSIE ') > 0) {
+                jQuery('body').addClass('o_browser_ie10');
+            } else if (!!navigator.userAgent.match(/Trident\/7\./)) {
+            	jQuery('body').addClass('o_browser_ie11');
+            }
+        });
+	</script>
+<!-- empty -->
+<style id="o_fontSize_css"></style>
+<style>
+		.o_custom_navbar-brand { background-image: none; }
+</style>
+
+
+
+
+<title>Neural Networks for NLP - Materials</title>
+</head>
+
+<body onload="o_start();" id="o_body" class=" o_lang_de ">
+<div id="o_bg"></div>
+<!-- START guiDebug -->
+
+<!-- END guiDebug -->
+<!-- START jsServer -->
+<div id='o_c1218489570'><div id='o_c1218489568'><div id='o_c1218489567'><div style="height:0px">
+<script>
+var stopped = true;
+function initPolling () {
+	o_info.lastClickTime = new Date().getTime();
+	pollgrowth = 0;
+	pollcount  = 0;
+	if (stopped) {
+		stopped = false;
+		tick();
+	}
+}
+
+jQuery("#o_body").bind("mouseover click keypress", function(event){initPolling();});
+
+o_info.mainwinref = this.window;
+o_info.wins = {};
+o_info.poller = null;
+
+var growthrate = 10;
+var pollminutes = 60;
+var pollcount = 0;
+var pollError = 0;
+var pollgrowth = 0;
+var timestampLastPoll = new Date().getTime();
+
+function tick () {
+	o_info.poller = jQuery.periodic({period: 5000, decay:1.005, max_period: Number.MAX_VALUE}, function() {
+		if ( !o_info.linkbusy && (this.period > 1000) && (pollError < 2) ) {
+			try {
+				var now = new Date().getTime();
+				if ((now - o_info.lastClickTime) < (pollminutes * 60 * 1000)) {
+					if ((now - timestampLastPoll) > (this.period + pollgrowth)) {
+						timestampLastPoll = now;
+						pollcount++;
+						pollgrowth = Math.ceil((this.period+pollgrowth)*(100+growthrate)/100) - this.period;
+						o_info.ajaxpp = jQuery.ajax({
+							method:'POST',
+							url:'/m/99b1ba4846047cc9efb778d92dcdd8db/?_csrf=7e0aef2e-7bf1-4111-bb79-c59fe965f0b5&oow=' + window.name,
+							cache: false,
+							success:onPollSuccess,
+							error:onPollFailure
+						});
+
+					}
+				} else {
+					stopped = true;
+				}
+			} catch (e) {
+				o_info.poller.cancel(); //stop on errors
+			}
+		}
+
+		if(pollError >= 2) {
+			window.close();
+		}
+	});
+}
+
+jQuery(document).ready(initPolling);
+
+jQuery(function() { 
+	setTimeout( function(){ if (!o_info.ajaxpp) {
+			showMessageBox('error', 'error', 'Some core functionality could not be started. Please log out of OLAT and login again.');
+		}},60000);
+	}
+);
+
+function onPollSuccess(content, s, response) {
+	if(response.status == 304) {
+	 	pollError = 0;
+	} else if(response.status >= 200 && response.status < 300) {
+	 	pollError = 0;
+	 	o_onc(response);
+	} else {
+	 	pollError++;
+	}
+}
+
+function onPollFailure(response) {
+  pollError++;
+  if(response.status == 404) { 
+	  	  	  o_info.poller.cancel(); 
+  }
+}
+/* ]]> */
+</script>
+<div id='o_c1218489569'><div id='o_c1218489566'><script>
+if (o_info.poller && o_info.poller.period != 5000) {
+	o_info.poller.period = 5000;
+	o_info.poller.reset();
+}
+</script>
+</div></div>
+<div id="oaawrp" style="visibility:hidden;width:0px;height:0px">
+<iframe src='/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/empty.html' name="oaa0" id="oaa0" width="1" height="1" onload="clearAfterAjaxIframeCall()"></iframe>
+</div>
+	<form id="o_oaap" method="post" action="#" onsubmit="return false" target="oaa0"><input type="hidden" name="v"></form>
+</div></div></div></div>
+<!-- END jsServer -->
+<div aria-hidden="true">
+
+</div>
+<!-- START olatContentPanel -->
+
+<a href="#o_main_container" class="sr-only" data-nosnippet>Zum Hauptbereich springen</a>
+	<div id="o_beta_logo"></div>
+
+<div id="o_messages" class="hidden-print" data-nosnippet><div id='o_c1218489431'><div id='o_c1218489424'><!-- empty --></div></div></div>
+<a id='o_top' aria-hidden="true" data-nosnippet></a>	
+<div id="o_header_wrapper" data-nosnippet> 
+	<div id="o_header_container" class="o_container_offcanvas container-fluid"> 
+		<div id="o_logo" aria-hidden="true"></div>
+		<div id="o_right_logo" aria-hidden="true"></div>
+		
+			</div>
+</div>
+
+<div id="o_offcanvas_right" class="o_navbar o_navbar-offcanvas " role="navigation" aria-label="Persönlich Werkzeuge, Einstellungen und Logout" data-nosnippet>
+	<a href="javascript:;" class="o_offcanvas_close" title="Schliessen"><i class='o_icon o_icon_close o_icon-lg'> </i> <span class="visually-hidden">Dialogfenster schliessen</span></a>
+	<div id="o_offcanvas_right_container" class="o_navbar-collapse">
+			<div id='o_c1218489534'><ul id="o_c1218489472" class="nav o_navbar-nav o_navbar-right o_sel_menu_tools">
+			<li role="presentation" class="dropdown-header">Persönliche Werkzeuge</li>
+			 	<li><a class=" o_sel_user_tools-calendar" id="o_c1218489506"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489506:2:1/',true,true,'cid','personal.tool.alt.1218489505','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Kalender"><i class='o_icon o_icon-fw o_icon_calendar o_icon-lg'></i> <span>Kalender</span></a></li>
+			 	<li><a class=" o_sel_user_tools-notifications" id="o_c1218489508"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489508:2:1/',true,true,'cid','personal.tool.alt.1218489507','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Abonnements"><i class='o_icon o_icon-fw o_icon_notification o_icon-lg'></i> <span>Abonnements</span></a></li>
+			 	<li><a class=" o_sel_user_tools-userfolder" id="o_c1218489510"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489510:2:1/',true,true,'cid','personal.tool.alt.1218489509','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Pers&ouml;nlicher Ordner"><i class='o_icon o_icon-fw o_bc_icon o_icon-lg'></i> <span>Persönlicher Ordner</span></a></li>
+			 	<li><a class=" o_sel_user_tools-notelist" id="o_c1218489512"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489512:2:1/',true,true,'cid','personal.tool.alt.1218489511','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Notizen"><i class='o_icon o_icon-fw o_icon_notes o_icon-lg'></i> <span>Notizen</span></a></li>
+			 	<li><a class=" o_sel_user_tools-effstatements" id="o_c1218489514"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489514:2:1/',true,true,'cid','personal.tool.alt.1218489513','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Leistungsnachweise"><i class='o_icon o_icon-fw o_icon_certificate o_icon-lg'></i> <span>Leistungsnachweise</span></a></li>
+			 	<li><a class=" o_sel_user_tools-badges" id="o_c1218489516"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489516:2:1/',true,true,'cid','personal.tool.alt.1218489515','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Badges"><i class='o_icon o_icon-fw o_icon_badge o_icon-lg'></i> <span>Badges</span></a></li>
+			 	<li><a class=" o_sel_user_tools-otherusers" id="o_c1218489521"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489521:2:1/',true,true,'cid','personal.tool.alt.1218489520','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Personensuche"><i class='o_icon o_icon-fw o_icon_search o_icon-lg'></i> <span>Personensuche</span></a></li>
+			 	<li><a class=" o_sel_user_tools-mylectures" id="o_c1218489527"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489527:2:1/',true,true,'cid','personal.tool.alt.1218489526','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Absenzen"><i class='o_icon o_icon-fw o_icon_lecture o_icon-lg'></i> <span>Absenzen</span></a></li>
+			 	<li><a class=" o_sel_user_tools-PortfolioV2" id="o_c1218489529"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489529:2:1/',true,true,'cid','personal.tool.alt.1218489528','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Portfolio 2.0"><i class='o_icon o_icon-fw o_ep_icon o_icon-lg'></i> <span>Portfolio 2.0</span></a></li>
+			 	<li><a class=" o_sel_user_tools-MediaCenter" id="o_c1218489531"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489531:2:1/',true,true,'cid','personal.tool.alt.1218489530','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Medien Center"><i class='o_icon o_icon-fw o_icon_media o_icon-lg'></i> <span>Medien Center</span></a></li>
+			 	<li><a class=" o_sel_user_tools-Mail" id="o_c1218489533"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489533:2:1/',true,true,'cid','personal.tool.alt.1218489532','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="E-Mail"><i class='o_icon o_icon-fw o_icon_mail o_icon-lg'></i> <span>E-Mail</span></a></li>
+			<li role="presentation" class="divider"></li>
+			<li role="presentation" class="dropdown-header">Konfiguration</li>
+			 	<li><a class=" o_sel_user_tools-profil" id="o_c1218489519"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489519:2:1/',true,true,'cid','personal.tool.alt.1218489518','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Profil"><i class='o_icon o_icon-fw o_icon_user o_icon-lg'></i> <span>Profil</span></a></li>
+			 	<li><a class=" o_sel_user_tools-mysettings" id="o_c1218489523"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489523:2:1/',true,true,'cid','personal.tool.alt.1218489522','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Einstellungen"><i class='o_icon o_icon-fw o_icon_settings o_icon-lg'></i> <span>Einstellungen</span></a></li>
+			 	<li><a class=" o_sel_user_tools-mypassword" id="o_c1218489525"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489525:2:1/',true,true,'cid','personal.tool.alt.1218489524','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Passwort"><i class='o_icon o_icon-fw o_icon_password o_icon-lg'></i> <span>Passwort</span></a></li>
+		<li role="presentation" class="divider"></li>
+	<li>
+								<a href="/auth/1%3A1%3A1218489472%3A2%3A0%3Acid%3Alogout%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/" class="o_logout" title="Loggen Sie sich aus OpenOlat aus" onclick="if (window.olatonunload) {olatonunload();}">
+			<i class="o_icon o_icon_logout o_icon-fw"></i> Log out
+		</a>
+	</li>
+</ul></div>
+	</div>
+</div>
+<div id="o_navbar_wrapper" class="o_navbar" role="navigation" aria-label="Hauptnavigation" data-nosnippet>
+	<div id="o_navbar_container" class="o_container_offcanvas container-fluid">
+		<a class="o_navbar-brand " href="/auth/" title="OpenOlat - infinite learning"  rel="noopener noreferrer" aria-hidden="true"></a>
+		
+		<div class="o_collapse o_navbar-collapse">
+						<ul id="o_c1218489428" class="o_navbar_sites nav o_navbar-nav">
+		<li class=' site_demo_icon'>
+			<a class="" id="o_c1218489435"  href="/url/RepositoryEntry/1545732182" onclick="o_XHREvent('/auth/1:1:1218489435:2:1/',true,true,'cid','t','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="&infin; Infos"><span>∞ Infos</span></a>
+		</li>
+		<li class=' o_site_repository'>
+			<a class="" id="o_c1218489437" accesskey="r"  href="/url/MyCoursesSite/0" onclick="o_XHREvent('/auth/1:1:1218489437:3:1/',true,true,'cid','t','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Kurse"><span>Kurse</span></a>
+		</li>
+		<li class=' o_site_groups'>
+			<a class="" id="o_c1218489439" accesskey="g"  href="/url/GroupsSite/0" onclick="o_XHREvent('/auth/1:1:1218489439:2:1/',true,true,'cid','t','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Arbeiten Sie mit Lern- und Arbeitsgruppen"><span>Gruppen</span></a>
+		</li>
+		<li class=' o_site_project'>
+			<a class="" id="o_c1218489441" accesskey="p"  href="/url/Projects/0" onclick="o_XHREvent('/auth/1:1:1218489441:2:1/',true,true,'cid','t','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Projekte"><span>Projekte</span></a>
+		</li>
+<script>
+"use strict";
+jQuery(document).trigger("oo.nav.sites.modified");
+</script>
+</ul>
+
+			<ul id="o_c1218489429"  class="o_navbar_tabs nav o_navbar-nav">
+	
+	<li class="">
+		<a class="" id="o_c1218492774" accesskey="s"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218492774:2:1/',true,true,'cid','a0','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Ressource mit Namen &quot;Functional Programming (2023)&quot; &ouml;ffnen"><i class='o_icon o_icon-fw o_CourseModule_icon'></i> <span>Functional Programming (2023)</span></a>
+			<a class="o_navbar_tab_close" id="o_c1218492775"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218492775:2:1/',true,true,'cid','c0','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Ressource mit Namen &quot;Functional Programming (2023)&quot; schliessen" role="button"><i class='o_icon o_icon_close_tab'></i> <span><span class='visually-hidden'>Ressource mit Namen "Functional Programming (2023)" schliessen</span></span></a>	 	</li>
+	
+	<li class=" active ">
+		<a class="" id="o_c1218518628" accesskey="s"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518628:2:1/',true,true,'cid','a1','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Ressource mit Namen &quot;Neural Networks for NLP&quot; &ouml;ffnen"><i class='o_icon o_icon-fw o_CourseModule_icon'></i> <span>Neural Networks for NLP</span></a>
+			<a class="o_navbar_tab_close" id="o_c1218518629"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518629:2:1/',true,true,'cid','c1','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Ressource mit Namen &quot;Neural Networks for NLP&quot; schliessen" role="button"><i class='o_icon o_icon_close_tab'></i> <span><span class='visually-hidden'>Ressource mit Namen "Neural Networks for NLP" schliessen</span></span></a>	 	</li>
+<script>
+"use strict";
+jQuery(document).trigger("oo.nav.tabs.modified");
+</script>
+</ul>
+
+						<ul id="o_navbar_more" class="nav o_navbar-nav o_dropdown_toggle" style="display: none" role="presentation" >
+				<li>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;">Mehr <b class="caret"> </b></a>
+					<ul class="dropdown-menu dropdown-menu-right"></ul>
+				</li>
+			</ul>
+							<div id='o_c1218489471'><div id="o_c1218489442" class="o_navbar_tools">
+	<ul id="o_navbar_tools_permanent" class="nav o_navbar-nav o_navbar-right">
+			 <li  id="o_navbar_coaching"  class="o_navbar_tool "><div id='o_c1218489446'><div id="o_c1218489444" class="o_coaching_notifications">
+	<span id="o_c1218489445"></span>
+</div></div></li>
+			 <li  id="o_navbar_imclient"  class="o_navbar_tool "><div id='o_c1218489455'><div id='o_c1218489447'>	<div class="o_im_messages">
+		<div id='o_c1218489448'>
+
+</div>
+	</div>
+
+	<div id="o_im_status" class="dropdown">
+		<a href="javascript:;" class="o_undecorated dropdown-toggle" data-toggle="dropdown" title="Instant-Messaging-Status wechseln" aria-label="Instant-Messaging-Status wechseln">
+			<i class="o_icon o_icon_status_available"></i>
+		</a>
+		<ul class="dropdown-menu dropdown-menu-right" role="menu">
+			<li><span class="o_chelp_wrapper"><a href="https://docs.openolat.org/de/manual_user/basic_concepts/Chat/" class="o_chelp" target="_blank" title="Hilfe zu dieser Funktion im Handbuch &ouml;ffnen"><i class='o_icon o_icon_help'> </i> Hilfe</a></span></li>
+			<li><a class="" id="o_c1218489450"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489450:2:1/',true,true,'cid','presence.available','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon_status_available o_icon-fw'></i> <span>Verfügbar</span></a></li>
+			<li><a class="" id="o_c1218489451"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489451:2:1/',true,true,'cid','presence.dnd','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon_status_dnd o_icon-fw'></i> <span>Bitte nicht stören</span></a></li>
+			<li><a class="" id="o_c1218489452"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489452:2:1/',true,true,'cid','presence.unavailable','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon_status_unavailable o_icon-fw'></i> <span>Nicht verfügbar</span></a></li>
+		</ul>
+	</div>
+
+		<div id="o_im_summary"><a class="badge" id="o_c1218489453"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489453:3:1/',true,true,'cid','cmd.roster','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Klicke um ein Fenster mit Deinen Chat-Kontakten zu &ouml;ffnen."><span><span aria-hidden='true'>10/89</span><span class='visually-hidden'>10 Deiner total 89 Kontakte sind online</span></span></a> <script>
+(function(){ var o_c1218489453 = jQuery('#o_c1218489453');o_c1218489453.click(function(event) { jQuery('#o_c1218489453').each(function(index, el) {;  var href = jQuery(el).attr('href');    if(href.indexOf('x') == -1) jQuery(el).attr('href',href+'x'+event.pageX+'y'+event.pageY+''); });});})();
+</script></div>
+	<div id='o_c1218489454'><!-- empty --></div>
+</div></div></li>
+			 <li  id="o_navbar_print"  class="o_navbar_tool "><a href="javascript:o_doPrint();" title="Diese Seite drucken" >
+	<i class="o_icon o_icon_print o_icon-fw"></i>
+	<span>Drucken</span>
+</a></li>
+			 <li  id="o_navbar_search_opener"  class="o_navbar_tool  dropdown "><a id="o_search_tool_toggler" href="#" class="dropdown-toggle" data-toggle="dropdown" title="Suchen" aria-expanded="false" aria-label="Suchen">
+	<i class="o_icon o_icon_search o_icon-lg"></i>
+	<span>Suche</span>
+</a>
+<ul class="dropdown-menu dropdown-menu-right">          
+	<li id="o_navbar_search" class="o_navbar-form">
+		<div id='o_c1218489463'><div id='o_c1218489462'><form  method="post" id="ofo_1218489462" name="ofo_1218489462" action="/auth/1%3A1%3A1218489462%3A1%3A1%3Aofo_%3Afid/"  onsubmit="return o_XHRSubmit('ofo_1218489462');"  onkeydown="o_submitByEnter(event)" ><input type="hidden" id="ofo_1218489462_dispatchuri" name="dispatchuri" value="undefined"><input type="hidden" id="ofo_1218489462_eventval" name="dispatchevent" value="undefined"><input type="hidden" name="_csrf" value="7e0aef2e-7bf1-4111-bb79-c59fe965f0b5"><fieldset  id="o_c1218489461"  class="o_form form-inline  ">
+
+	<div id='o_c1218489464' class='form-group clearfix'><div  class="form-group  ">
+		<div class="input-group ">
+		
+				<div id='o_c1218489465'><input type="text" id="o_fi1218489465" name="o_fi1218489465" class='form-control ' size="35" maxlength="255" value=""  onfocus="o_info.lastFormFocusEl='o_fi1218489465'; " placeholder="Suchen" autofocus><script>(function() { "use strict";
+jQuery('#o_fi1218489465').on('change keypress', {formId:"ofo_1218489462_dispatchuri", hideMessage:false}, setFlexiFormDirtyByListener);})();</script></div>
+
+			<span class="input-group-addon">
+				<a class="o_search" id="o_fi1218489466" href="javascript:;" onmousedown="o_info.preventOnchange=true;" onmouseup="o_info.preventOnchange=false;" onclick="o_ffEvent(event,'ofo_1218489462','ofo_1218489462_dispatchuri','o_fi1218489466','ofo_1218489462_eventval','2'); "  title="Suche in: &quot;In OLAT&quot;"><i class='o_icon o_icon-fw o_icon_search o_icon-lg'></i> <span><span class='visually-hidden'>Suche in: "In OLAT"</span></span></a>
+			</span>
+
+		</div>
+</div></div>
+</fieldset></form> <script>
+ /* <![CDATA[ */ 
+ (function() {jQuery('#ofo_1218489462').keypress(function(event) {
+ if (13 == event.keyCode) {
+  event.preventDefault();
+  if (this.onsubmit()) { this.submit(); }
+ }
+});
+})();
+ /* ]]> */ 
+</script></div></div>
+	</li>
+</ul>
+<script>
+jQuery('#o_search_tool_toggler').click(function () {
+	setTimeout(function() {
+		jQuery('#o_search_tool_toggler[aria-expanded="true"] + .dropdown-menu #o_navbar_search input:text').focus();	
+	},0);
+});
+</script>
+</li>
+				<li id="o_navbar_help_opener" class="o_navbar_tool dropdown">
+					<a id="o_help_tool_toggler" href="javascript:;" class="dropdown-toggle" aria-expanded="false" data-toggle="dropdown" title="Starten Sie die OpenOlat-Hilfe" aria-label="Hilfe" aria-controls="o_c1218489442_help">
+						<i class="o_icon o_icon_help o_icon-lg"> </i>
+						<span>Hilfe</span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-right" id="o_c1218489442_help">          
+			 				<li  id="o_navbar_help_manual"  class="o_navbar_tool "><a class=""  href="https://docs.openolat.org/de/" target="oohelp" title="OpenOlat Handbuch" rel="noopener noreferrer"><i class="o_icon o_icon-fw o_icon_manual"> </i> <span>OpenOlat Handbuch</span></a></li>
+			 				<li  id="o_navbar_help_academy"  class="o_navbar_tool "><a class=""  href="https://www.openolat.com/openolat-academy/" target="ooAcademy" title="OpenOlat Academy" rel="noopener noreferrer"><i class="o_icon o_icon-fw o_icon_video"> </i> <span>OpenOlat Academy</span></a></li>
+			 				<li  id="o_navbar_help_mail"  class="o_navbar_tool "><a class="" id="o_c1218489458"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489458:2:1/',true,true,'cid','help.support','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon-fw o_icon_mail'></i> <span>E-Mail Support</span></a></li>
+					</ul>
+				</li>
+		<li id="o_navbar_my_menu" class="o_portrait">
+			<a id="o_sel_navbar_my_menu_caret" href="javascript:;" onclick="OPOL.navbar.toggleRight(); return false;">
+				<div id='o_c1218489470'><div id='o_c1218489469'><div class="o_portrait">
+	<div class="o_portrait_image">
+		<img src="/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/images/transparent.gif" alt="Profil und Visitenkarte: Maryline Majiade" class="o_portrait_avatar_small" style="background-image : url('/m/11fbb55f97807e1a25f683d9e3b9436d/2417492269/portrait_small.jpg') !important; background-repeat: no-repeat !important;">
+	</div>
+</div>
+ </div></div>
+				<span>Maryline</span>
+				<b class="caret"> </b>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<script>
+"use strict";
+jQuery('#o_help_tool_toggler').click(function () {
+	setTimeout(function() {
+		jQuery('#o_help_tool_toggler[aria-expanded="true"] + .dropdown-menu #o_navbar_help_list input:text').focus();	
+	},0);
+});
+</script>
+</div>
+		</div>
+		
+	</div>
+</div>
+<div id="o_container_page_width_toggler" aria-hidden="true" data-nosnippet>
+	<div id="o_go_standard_width" title="Standard Breite f&uuml;r Inhalt verwenden, optimiert f&uuml;r Lesen" class="btn btn-primary btn-xs o_noprint" role="button"><i class="o_icon o_icon_width_collapse o_icon-fw"> </i></div>
+	<div id="o_go_full_width" title="Standard Breite f&uuml;r Inhalt verwenden, optimiert f&uuml;r Lesen" class="btn btn-default btn-xs o_noprint" role="button"><i class="o_icon o_icon_width_expand o_icon-fw"> </i></div>
+</div>
+<div><script>
+jQuery(document).ready(function() {
+	jQuery("#o_go_standard_width").click(function() { OPOL.setContainerFullWidth(0); o_XHRNFEvent('/auth/1:1:1218489427:2:1/','cid','width.standard','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5','no-response','oo-no-response'); });
+	jQuery("#o_go_full_width").click(function() { OPOL.setContainerFullWidth(1); o_XHRNFEvent('/auth/1:1:1218489427:2:1/','cid','width.full','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5','no-response','oo-no-response'); });
+});
+</script></div>
+<div id='o_c1218489433'><!-- empty --></div>
+
+<div id="o_main_wrapper">
+	<div id="o_main_container" class="o_container_offcanvas container-fluid">
+		<div id='o_c1218489538'><div id='o_c1218518630'><div id='o_c1218518382' class='o_with_toolbar o_with_breadcrumb o_lecture_course'><div id='o_main_toolbar' class='o_toolbar'><div id='o_c1218518382_bbar' class='o_breadcrumb'><ol class='breadcrumb'><li class='o_breadcrumb_back'><a class="" id="o_c1218518383" accesskey="b"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518382_bbar:1:1/',true,true,'cid','back','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Neural Networks for NLP schliessen" aria-label="Neural Networks for NLP schliessen"><i class='o_icon o_icon_back'></i> <span> </span></a></li><li><a class="" id="o_c1218518529"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518529:2:1/',true,true,'cid','crumb_0','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><span>Neural Networks for NLP</span></a></li><li class='o_breadcrumb_close'><a class="" id="o_c1218518384" accesskey="x"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518382_bbar:1:1/',true,true,'cid','close','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Neural Networks for NLP schliessen" aria-label="Schliessen"><i class='o_icon o_icon_close_tool'></i> <span>Neural Networks for NLP schliessen</span></a></li></ol></div><div id='o_c1218518382_tbar' class='o_tools_container'><div class='container-fluid'><ul class='o_tools o_tools_right_edge list-inline'><li class='o_tool_previous'><a class="" id="o_c1218518623"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518623:6:1/',true,true,'cid','previouselement','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Vorheriges Element"><i class='o_icon o_icon-fw o_icon_previous_toolbar'></i> <span><span class='visually-hidden'>Vorheriges Element</span></span></a></li><li class='o_tool_next'><a  id="o_c1218518624"  title="Nächstes Element" class=" o_disabled  disabled " href='#' onclick='return false;'><i class='o_icon o_icon-fw o_icon_next_toolbar'></i> <span></span></a></li></ul><ul class='o_tools o_tools_right list-inline'><li class='o_tool_dropdown dropdown'><a href='#' class='dropdown-toggle o_sel_dropdown_mycourse dropdown-menu-right' id='dd_btn_1218518581' data-toggle='dropdown'><span class='o_inner_wrapper '><i class='o_icon o_icon_user'>&nbsp;</i></span><span class='o_label'>Mein Kurs</span> <i class='o_icon o_icon_caret'> </i> </a><ul class='dropdown-menu o_sel_dropdown_mycourse dropdown-menu-right' id='dd_items_1218518581' role='menu'><li><a class="" id="o_c1218518582"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518582:2:1/',true,true,'cid','efficiencystatement','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon-fw o_icon_certificate'></i> <span>Leistungsnachweis</span></a></li><li><a class="" id="o_c1218518583" href="javascript:;" onclick="o_openPopUp('/auth/1%3A1%3A1218518583%3A2%3A0%3Acid%3Apersonalnote%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/','notes',750,550); return false;" ><i class='o_icon o_icon-fw o_icon_notes'></i> <span>Notizen</span></a></li><li><a class="" id="o_c1218518587"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518587:2:1/',true,true,'cid','bookmark','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Bookmark entfernen"><i class='o_icon o_icon-fw o_icon o_icon_bookmark'></i> <span>Bookmark</span></a></li><li class='divider'></li><li><a class="" id="o_c1218518589"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518589:2:1/',true,true,'cid','group','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon-fw o_icon_group'></i> <span>Group 14</span></a></li><li class='divider'></li><li><a class="" id="o_c1218518590"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518590:2:1/',true,true,'cid','leave','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon-fw o_icon_sign_out'></i> <span>Aus Kurs austragen</span></a></li></ul></li></ul><ul class='o_tools o_tools_center list-inline'><li class='o_tool'><a class="" id="o_c1218518592"  href="https://olat.vcrp.de/auth/RepositoryEntry/4319543636/Infos/0" onclick="o_XHREvent('/auth/1:1:1218518592:2:1/',true,true,'cid','courseconfig','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class='o_icon o_icon-fw o_icon_details'></i> <span>Kursinfo</span></a></li></ul></div></div></div><div id='o_c1218518385'><!-- empty --></div><div id='o_c1218518511'><script>
+/* <![CDATA[ */
+o_info.course_id="4319543636";
+	delete o_info.course;
+	o_info.course_node={"type":"st","short_title":"Neural Networks for NLP","long_title":"Neural Networks for NLP","display_option":"title+desc+content"};
+function o_activateCourseNode(nodeid) {
+	if (!o_info.linkbusy) {
+		window.focus();
+		o_XHREvent('/auth/1:1:1218518510:2:1/',false,false,'cid','activateCourseNode','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5',"nodeid",nodeid);
+		o_scrollTop();
+	}
+}
+function o_activateCourseTool(toolname) {
+	if (!o_info.linkbusy) {
+		window.focus();
+		o_XHREvent('/auth/1:1:1218518510:2:1/',false,false,'cid','activateCourseTool','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5',"toolname",toolname);
+		o_scrollTop();
+	}
+}
+/* ]]> */ 
+</script>
+
+<div class="o_course_run" data-nodeid="106528694353092">
+	<div id='o_c1218518509'><div id='o_c1218518504'><div id="o_main" class="o_hide_main_right">
+	<div id="o_main_left" style="width: 14em;">
+		<div id="o_main_left_content" class="clearfix"> 
+			<div id='o_c1218518505'><div id='o_c1218518440'>
+<div class='o_tree o_tree_root_visible o_course_menu ' role='navigation'><ul class="o_tree_l0"><li class=' active_parent children_visible' data-nodeid='106528694353092'><div id='dd106528694353092' class='o_tree_l0'><span class='o_tree_link o_tree_l0 active_parent'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528694353092','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Neural Networks for NLP"><i class='o_icon o_icon-fw o_CourseModule_icon'></i> <span  class='o_tree_item'>Neural Networks for NLP</span></a></span></div>
+<ul class=" o_tree_l1"><li class='' data-nodeid='106528695491512'><div id='dd106528695491512' class='o_tree_l1'><span class='o_tree_link o_tree_l1 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528695491512','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="List of Participants"><i class='o_icon o_icon-fw o_cmembers_icon'></i> <span  class='o_tree_item'>List of Participants</span></a></span></div></li><li class='' data-nodeid='108618896690958'><div id='dd108618896690958' class='o_tree_l1'><span class='o_tree_link o_tree_l1 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','108618896690958','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Notifications"><i class='o_icon o_icon-fw o_infomsg_icon'></i> <span  class='o_tree_item'>Notifications</span></a></span></div></li><li class='' data-nodeid='106528701602143'><div id='dd106528701602143' class='o_tree_l1'><span class='o_tree_link o_tree_l1 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528701602143','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Info"><i class='o_icon o_icon-fw o_sp_icon'></i> <span  class='o_tree_item'>Info</span></a></span></div></li><li class=' children_visible' data-nodeid='106528695521641'><div id='dd106528695521641' class='o_tree_l1'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',false,true,'cid','ctncl','nidle','106528695521641','ctntr','close','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  class='o_tree_oc_l1'><i class='o_icon o_icon_close_tree'></i></a><span class='o_tree_link o_tree_l1 o_tree_level_label_close'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528695521641','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Exercises"><i class='o_icon o_icon-fw o_st_icon'></i> <span  class='o_tree_item'>Exercises</span></a></span></div>
+<ul class=" o_tree_l2"><li class='' data-nodeid='106639182993014'><div id='dd106639182993014' class='o_tree_l2'><span class='o_tree_link o_tree_l2 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106639182993014','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Group selection"><i class='o_icon o_icon-fw o_en_icon'></i> <span  class='o_tree_item'>Group selection</span></a></span></div></li><li class='' data-nodeid='106528695690017'><div id='dd106528695690017' class='o_tree_l2'><span class='o_tree_link o_tree_l2 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528695690017','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Exercise Sheet 1"><i class='o_icon o_icon-fw o_gta_icon'></i> <span  class='o_tree_item'>Exercise Sheet 1</span></a></span></div></li><li class='' data-nodeid='106788729809014'><div id='dd106788729809014' class='o_tree_l2'><span class='o_tree_link o_tree_l2 o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106788729809014','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Exercise Sheet 2"><i class='o_icon o_icon-fw o_gta_icon'></i> <span  class='o_tree_item'>Exercise Sheet 2</span></a></span></div></li></ul></li><li class=' o_last_node active' data-nodeid='106528695323379'><div id='dd106528695323379' class='o_tree_l1 active'><span class='o_tree_link o_tree_l1 active o_tree_level_label_leaf'><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218518440:6:1/',true,true,'cid','ctncl','nidle','106528695323379','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Materials"><i class='o_icon o_icon-fw o_bc_icon'></i> <span  class='o_tree_item'>Materials</span></a></span></div></li></ul></li></ul></div></div></div>	
+		</div>
+		<div id="o_main_left_toggle" class="hidden-print" aria-hidden="true">
+		  <span class="sr-only">Toggle content menu</span>
+		  <i class="o_icon o_icon_menuhandel"></i>
+		</div>
+	</div>
+	<div id="o_main_center"> 		<a id="o_content" aria-hidden="true"></a> 
+		<div id="o_main_center_content" class="clearfix">			          
+	       	<div id="o_main_center_content_inner">
+				<div id='o_c1218518507'><div id='o_c1218518441'><div id='o_c1218716920'><div id='o_c1218716913'><div class="o_course_node">
+		<div id='o_c1218716917'><div id='o_c1218716915'><div class="o_expand_ctrl ">
+		<div id='o_c1218716919'><div id='o_c1218716918'><div class="o_cn_styled o_cn_header o_colcat_left  o_colcat_nocolor  ">
+	<div class="o_top " >
+		<div class="o_text">
+				<div class="o_text_block">
+					<div class="">
+						<div>
+							<h2>
+									<i class="o_icon o_bc_icon"></i>
+								<span>Materials</span>
+							</h2>
+						</div>
+					</div>
+					<div></div>
+				</div>
+		</div>
+	</div>
+		<div class="o_expanded o_text">
+				<div class="o_text_block">
+					<div>
+						<div><p>Here, you will find the slides and the exercise sheets.</p></div>
+					</div>
+					<div></div>
+				</div>
+		</div>
+</div></div></div>
+		<div class="o_button_group"><a class="btn btn-default o_button_details" id="o_c1218716916"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716916:2:1/',true,true,'cid','expandButton','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  role="button"><i class='o_icon o_icon_lg o_icon_details_collaps'></i> <span></span></a></div>
+</div></div></div>
+	<div class="o_content">
+		<div id='o_c1218716912'><div id='o_c1218716886'><div class="o_briefcase">
+	<div id='o_c1218716904'><div id="o_c1218716888" class="o_noti">
+	<a href="javascript:contextHelpWindow('https://docs.openolat.org/de/manual_user/personal_menu/Personal_Tools/#subscriptions')" title="Hilfe zu dieser Funktion im Handbuch &ouml;ffnen" class="o_label">
+		<i class="o_icon o_icon_notification"></i> <span id="o_sub_label">Änderungen</span></a> <button type="button" role="switch" id="o_fi1218716893" class="o_button_toggle o_can_have_focus o_noti_subscribe_link" aria-labelledby="o_sub_label" onmousedown="o_info.preventOnchange=true;" onmouseup="o_info.preventOnchange=false;" onclick="o_XHREvent('/auth/1:1:1218716893:2:1/',false,true,'cid','toggle','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5');" onfocus="o_info.lastFormFocusEl='o_fi1218716893';" aria-checked="false" ><i class="o_icon o_icon_toggle"></i> <span class="o_on">ein</span><span class="o_off">aus</span></button>
+</div></div>
+	<div class="o_briefcase_foldercomp">
+		<div class="o_briefcase_searchcomp"><div id='o_c1218716907'><div id='o_c1218716906'><form  method="post" id="ofo_1218716906" name="ofo_1218716906" action="/auth/1%3A1%3A1218716906%3A1%3A1%3Aofo_%3Afid/"  onsubmit="return o_XHRSubmit('ofo_1218716906');"  onkeydown="o_submitByEnter(event)" ><input type="hidden" id="ofo_1218716906_dispatchuri" name="dispatchuri" value="undefined"><input type="hidden" id="ofo_1218716906_eventval" name="dispatchevent" value="undefined"><input type="hidden" name="_csrf" value="7e0aef2e-7bf1-4111-bb79-c59fe965f0b5"><fieldset  id="o_c1218716905"  class="o_form form-inline  ">
+
+	<div id='o_c1218716908' class='form-group clearfix'><div  class="form-group  ">
+		<div class="input-group ">
+		
+				<div id='o_c1218716909'><input type="text" id="o_fi1218716909" name="o_fi1218716909" class='form-control ' size="35" maxlength="255" value=""  onfocus="o_info.lastFormFocusEl='o_fi1218716909'; " placeholder="Suchen" autofocus><script>(function() { "use strict";
+jQuery('#o_fi1218716909').on('change keypress', {formId:"ofo_1218716906_dispatchuri", hideMessage:false}, setFlexiFormDirtyByListener);})();</script></div>
+
+			<span class="input-group-addon">
+				<a class="o_search" id="o_fi1218716910" href="javascript:;" onmousedown="o_info.preventOnchange=true;" onmouseup="o_info.preventOnchange=false;" onclick="o_ffEvent(event,'ofo_1218716906','ofo_1218716906_dispatchuri','o_fi1218716910','ofo_1218716906_eventval','2'); "  title="Suche in: &quot;Materials&quot;"><i class='o_icon o_icon-fw o_icon_search o_icon-lg'></i> <span><span class='visually-hidden'>Suche in: "Materials"</span></span></a>
+			</span>
+
+		</div>
+</div></div>
+</fieldset></form> <script>
+ /* <![CDATA[ */ 
+ (function() {jQuery('#ofo_1218716906').keypress(function(event) {
+ if (13 == event.keyCode) {
+  event.preventDefault();
+  if (this.onsubmit()) { this.submit(); }
+ }
+});
+})();
+ /* ]]> */ 
+</script></div></div></div>
+		<div class="o_briefcase_folder"><div id='o_c1218716911'><form  method="post" id="folder1219334797" action="/auth/1%3A1%3A1218716911%3A3%3A1%3Acid%3Aaction%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/"  onsubmit="o_XHRSubmit('folder1219334797');"><input id="o_mai_folder1219334797" type="hidden" name="multi_action_identifier" value="" /><div class="o_bc_createactions clearfix"><ul class='nav navbar-nav navbar-right'></ul></div><ol class='breadcrumb'><li><a  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716911:3:1/',false,true,'_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" >Materials</a></li><li class='active'>Exercise Sheets</li></ol><div class='o_table_wrapper'><table class="table table-condensed table-striped table-hover o_bc_table"><thead><tr><th class='o_table_checkall'><a id='folder1219334797_dsa' href="javascript:b_briefcase_toggleCheck('folder1219334797',false);o_table_updateCheckAllMenu('folder1219334797',true,false);" title="Auswahl löschen" style='display:none'><i class='o_icon o_icon-lg o_icon_check_on' aria-hidden='true'> </i></a><a id='folder1219334797_sa' href="javascript:b_briefcase_toggleCheck('folder1219334797',true);o_table_updateCheckAllMenu('folder1219334797',false,true);" title="Alle auswählen"><i class='o_icon o_icon-lg o_icon_check_off' aria-hidden='true'> </i></a></th><th><a class='o_orderby o_orderby_asc'  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716911:3:1/',false,false,'fcsrt','name','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" >Name</a></th><th>Anzeigen</th><th><a class='o_orderby '  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716911:3:1/',false,false,'fcsrt','size','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" >Grösse</a></th><th><a class='o_orderby '  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716911:3:1/',false,false,'fcsrt','date','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" >Geändert</a></th><th>Lizenz</th><th><a class='o_orderby '  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218716911:3:1/',false,false,'fcsrt','lock','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;" ><i class="o_icon o_icon_locked  o_icon-lg" title="Datei(en) gesperrt"></i></a></th><th><i class="o_icon o_icon-fw o_icon-lg o_icon_edit_metadata" title="Metadaten bearbeiten"></i></th></tr></thead><tbody><tr><td><input type="checkbox" name="paths" value="tutorial_1.ipynb" /></td><td class="o_bc_filename"><a id='o_sel_doc_0' href="/auth/1%3A1%3A1218716911%3A3%3A0%3Aserv%3Ax%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/Exercise%20Sheets/tutorial_1.ipynb" download="tutorial_1.ipynb"><i class="o_icon o_icon-fw o_filetype_file o_filetype_ipynb"></i> tutorial_1.ipynb</a><div id='o_sel_doc_tooltip_0' class='o_bc_meta' style='display:none;'><h5>Tutorial 1 (for Exercise 1)</h5><p class="o_author">Autor*in: Mayank Nagda</p></div><script>jQuery(function() {
+  jQuery('#o_sel_doc_0').tooltip({
+    html: true,
+    container: 'body',
+    sanitize: false,
+    title: function(){ return jQuery('#o_sel_doc_tooltip_0').html(); }
+  });
+  jQuery('#o_sel_doc_0').on('click', function(){
+   jQuery('#o_sel_doc_0').tooltip('hide');
+  });
+});</script></td><td></td><td><span class='text-muted small'>107,2 kB</span></td><td><span class='text-muted small'>30.10.23, 13:27</span></td><td><a id='o_lic_1219334802' href='javascript:;'><span class='small'>Keine Angabe</span></a><div id='o_lic_pop_1219334802' style='display:none;' class='o_lic_popup'><div><div class='o_block_bottom'><h5>Lizenz</h5><div><i class='o_icon o_icon_lic_no_license'> </i><span> Keine Angabe</span></div></div></div></div><script>jQuery(function() {
+  o_popover('o_lic_1219334802','o_lic_pop_1219334802','top');
+});</script></td><td></td><td></td></tr><tr><td><input type="checkbox" name="paths" value="Tutorial 0.zip" /></td><td class="o_bc_filename"><a id='o_sel_doc_1' href="/auth/1%3A1%3A1218716911%3A3%3A0%3Aserv%3Ax%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/Exercise%20Sheets/Tutorial%200.zip" download="Tutorial 0.zip"><i class="o_icon o_icon-fw o_filetype_file o_filetype_zip"></i> Tutorial 0.zip</a><div id='o_sel_doc_tooltip_1' class='o_bc_meta' style='display:none;'><h5>Tutorial 0</h5><p class="o_author">Autor*in: Mayank Nagda</p></div><script>jQuery(function() {
+  jQuery('#o_sel_doc_1').tooltip({
+    html: true,
+    container: 'body',
+    sanitize: false,
+    title: function(){ return jQuery('#o_sel_doc_tooltip_1').html(); }
+  });
+  jQuery('#o_sel_doc_1').on('click', function(){
+   jQuery('#o_sel_doc_1').tooltip('hide');
+  });
+});</script></td><td></td><td><span class='text-muted small'>76,7 kB</span></td><td><span class='text-muted small'>30.10.23, 13:29</span></td><td><a id='o_lic_1219334803' href='javascript:;'><span class='small'>Keine Angabe</span></a><div id='o_lic_pop_1219334803' style='display:none;' class='o_lic_popup'><div><div class='o_block_bottom'><h5>Lizenz</h5><div><i class='o_icon o_icon_lic_no_license'> </i><span> Keine Angabe</span></div></div></div></div><script>jQuery(function() {
+  o_popover('o_lic_1219334803','o_lic_pop_1219334803','top');
+});</script></td><td></td><td></td></tr><tr><td><input type="checkbox" name="paths" value="Tutorial 2.zip" /></td><td class="o_bc_filename"><a id='o_sel_doc_2' href="/auth/1%3A1%3A1218716911%3A3%3A0%3Aserv%3Ax%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/Exercise%20Sheets/Tutorial%202.zip" download="Tutorial 2.zip"><i class="o_icon o_icon-fw o_filetype_file o_filetype_zip"></i> Tutorial 2.zip</a><div id='o_sel_doc_tooltip_2' class='o_bc_meta' style='display:none;'><p class="o_author">Autor*in: Marcio Monteiro</p></div><script>jQuery(function() {
+  jQuery('#o_sel_doc_2').tooltip({
+    html: true,
+    container: 'body',
+    sanitize: false,
+    title: function(){ return jQuery('#o_sel_doc_tooltip_2').html(); }
+  });
+  jQuery('#o_sel_doc_2').on('click', function(){
+   jQuery('#o_sel_doc_2').tooltip('hide');
+  });
+});</script></td><td></td><td><span class='text-muted small'>15,4 kB</span></td><td><span class='text-muted small'>13.11.23, 12:55</span></td><td><a id='o_lic_1219334804' href='javascript:;'><span class='small'>Keine Angabe</span></a><div id='o_lic_pop_1219334804' style='display:none;' class='o_lic_popup'><div><div class='o_block_bottom'><h5>Lizenz</h5><div><i class='o_icon o_icon_lic_no_license'> </i><span> Keine Angabe</span></div></div></div></div><script>jQuery(function() {
+  o_popover('o_lic_1219334804','o_lic_pop_1219334804','top');
+});</script></td><td></td><td></td></tr></tbody></table><div class='o_button_group'><button type="button" class='btn btn-default' onclick="o_TableMultiActionEvent('folder1219334797','.actionmail');"><span>Mail versenden</span></button> <button type="button" class='btn btn-default' onclick="o_TableMultiActionEvent('folder1219334797','.actiondzip');"><span>Herunterladen</span></button></div></div></form></div></div>
+	</div>
+	<div class="o_briefcase_webdav">
+<div class="o_togglebox_wrapper o_block">
+	<a href="#o_briefcase_webdav_link" data-toggle="collapse" data-target="#o_briefcase_webdav_link" class="o_opener" onclick="jQuery(this).toggleClass('o_in'); return false;">
+		<i class="o_icon o_icon-fw o_icon-lg"></i> 
+		WebDAV Link
+	</a>
+	<div id="o_briefcase_webdav_link" class="collapse">
+		<div class="o_togglebox_content clearfix">	
+		<div class="pull-right"><span class="o_chelp_wrapper"><a href="https://docs.openolat.org/de/manual_user/basic_concepts/Using_WebDAV/" class="o_chelp" target="_blank" title="Hilfe zu dieser Funktion im Handbuch &ouml;ffnen"><i class='o_icon o_icon_help'> </i> Hilfe</a></span></div>
+			<p><code>https://olat.vcrp.de/webdav</code></p>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+</div></div>
+	</div>
+</div></div></div></div></div>		
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+"use strict";
+jQuery().ready(function() {
+	// Main vertical splitter, anchored to the browser window
+	
+	jQuery("#o_main_left").resizable({
+        handles: 'e',
+        containment: '#o_main',
+	    grid: [o_info.emPxFactor, 10000],
+	    start: function() {
+	    	var leftCol = jQuery('#o_main_left');
+			var oldEmWidth = Math.round(leftCol.width() / o_info.emPxFactor);
+			menuState.origWidth=oldEmWidth;
+	    },
+	    stop: function() {
+	    	var leftCol = jQuery('#o_main_left');
+			var newEmWidth = Math.round(leftCol.width() / o_info.emPxFactor);
+			leftCol.width(newEmWidth + 'em');
+			if (menuState.docked) {
+								if (newEmWidth <= 2) {
+					jQuery('#o_main_left_toggle').show();				
+					menuState.minimized = true;
+				} else {
+					jQuery('#o_main_left_toggle').hide();								
+					menuState.minimized = false;
+				}				
+			}
+			o_XHRNFEvent('/auth/1:1:1218518504:2:1/','cid','saveCol1Width','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5','no-response','oo-no-response', "newEmWidth", newEmWidth);
+	    }
+	});
+
+		var menuState = {
+		origWidth : 14,
+		minimized : false,
+		open : true,
+		docked : true			
+	};
+	
+	var o_restoreMenu = function(duration) {
+		jQuery('#o_main_left_toggle').hide();	
+		menuState.minimized = false;
+		var l = jQuery('#o_main_left');
+		l.transition({'width': menuState.origWidth + 'em'}, duration, function() {
+			
+		});
+		o_XHRNFEvent('/auth/1:1:1218518504:2:1/','cid','saveCol1Width','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5','no-response','oo-no-response', "newEmWidth", menuState.origWidth);
+	};
+	var o_showMenu = function(duration) {
+		duration = (typeof duration === "undefined") ? 500 : duration;
+		if (!menuState.open) {
+			jQuery('#o_main_left_content').show();
+			var l = jQuery('#o_main_left');
+			l.transition({'x': 0, 'y': 0, 'left': 0}, duration, function() {
+				jQuery('#o_main_left_content').show();
+				menuState.open = true;
+			});
+		} 
+	};
+	var o_hideMenu = function(duration) {
+		duration = (typeof duration === "undefined") ? 500 : duration;
+		if (!menuState.docked && menuState.open) {
+			var l = jQuery('#o_main_left');
+			l.transition({'x': '-' + l.css('width'), 'y': 0, 'left': '5px'}, duration, function() {
+				jQuery('#o_main_left_content').hide();
+				menuState.open = false;
+			});			
+		} 
+	};
+	var o_undockMenu = function(duration) {
+		if (menuState.docked) {
+			var left = jQuery('#o_main_left');
+			jQuery('#o_main_left_toggle').show();
+			jQuery('#o_main').addClass('o_hide_main_left');
+			left.css({position: 'absolute'})
+				.addClass('o_offcanvas')
+				.transition({'y': 0}, duration, function() {
+					// close menu when something happens on the screen
+					jQuery(document).on('click', '.o_tree_link', o_hideMenu);
+					menuState.docked = false;
+					menuState.minimized = false;
+					o_hideMenu(duration);
+			});							
+		} 
+	};
+	var o_dockMenu = function(duration) {
+		o_showMenu();
+		if (!menuState.docked) {
+			jQuery('#o_main_left').transition({'y': 0, 'left': 0 }, duration, function() {
+				jQuery('#o_main_left')
+					.css({position: 'relative'})
+					.removeClass('o_offcanvas')
+					.get(0).style.transform = 'none';
+				
+				jQuery('#o_main_left_toggle').hide();
+				jQuery(document).off('click', '.o_tree_link', o_hideMenu);
+				menuState.docked = true;
+				o_restoreMenu(0);
+				jQuery('#o_main').removeClass('o_hide_main_left');
+			})			
+		} 
+	};
+	var o_responsiveMenu = function() {
+		if (jQuery(window).width() < 992 && !(jQuery.support.opacity == false)) {
+			// same breakpoint as bootstrap screen-md, opacity detect IE8
+			o_undockMenu(500);
+		} else {
+			o_dockMenu(500);
+		}
+	};
+
+	// toggle menu on toggle events
+	jQuery('#o_main_left_toggle').on('click', function() {
+		if (menuState.minimized) {
+			o_restoreMenu(500);
+		} else if (menuState.open) {
+			o_hideMenu(500);
+		} else {
+			o_showMenu(500);
+		}
+	});
+	// recalculate menu when browser is resized
+	jQuery(document).on("oo.window.resize.after", o_responsiveMenu);
+	// do initialization now
+	if (jQuery(window).width() < 992 && !(jQuery.support.opacity == false)) {
+		// same breakpoint as bootstrap screen-md, opacity detect IE8
+		o_undockMenu(0);
+	}
+	// init toogle when menu is super small
+	if (Math.round(jQuery('#o_main_left').width() / o_info.emPxFactor) <= 2) {
+		jQuery('#o_main_left_toggle').show();				
+		menuState.minimized = true;
+	}
+	
+	// Adjust width to fit menu content
+	try {
+		if (jQuery('#o_main_left div.o_tree').length > 0) {
+			var realWidth = jQuery('div.o_tree').prop('scrollWidth');
+			var visibleWidth = jQuery('#o_main_left_content').width();
+			if (visibleWidth < realWidth) {
+				var viewPortWidth = jQuery(window).width();
+				if (viewPortWidth >= 992) {
+					// Only in non-mobile view: use max 1/3 of content
+					var containerWidth = jQuery('#o_main_container').width();
+					// convert px to em: 1em=14px
+					var newWith = (realWidth > (containerWidth / 4)) ? (containerWidth / 4) : realWidth;
+					var newEmWidth = Math.ceil(newWith / 14) + 2;
+					jQuery('#o_main_left').width(newEmWidth + 'em');					
+				}
+			}
+		}	
+	} catch(e) {
+		if(window.console)  console.log(e);
+	}
+
+});
+</script>
+</div></div>
+</div></div></div></div></div>
+		<a id="o_toplink" href="#o_top" onclick="o_scrollTop();" title="Zum Anfang der Seite" aria-hidden="true">
+			<i class="o_icon o_icon_top"></i> 
+			nach oben
+		</a>	
+	</div>
+</div>
+
+<div id="o_footer_wrapper">
+	<div id="o_footer_container" class="o_container_offcanvas container-fluid">
+		<div id='o_c1218489558'><div id='o_c1218489539'><div id="o_footer_user" class="clearfix">
+		<span id="o_username">Eingeloggt als <i>Maryline Majiade</i></span>
+	<span id="o_counter">(<span id='o_c1218489540'>6543</span> Personen sind online)</span>
+		<div id='o_c1218489557'><div id='o_c1218489556'><script>
+function o_shareSocialUrl() {
+	if(o_info.businessPath && o_info.businessPath.length > 0) return o_info.businessPath;
+	return 'https://olat.vcrp.de';
+} 
+function o_shareSocialTitle() {
+	return document.title;
+}
+function o_shareCallout() {
+	return '<p><input id="callout_share_link_in" type="text" name="cl_share_link" value="' + o_shareSocialUrl() + '" size="64" /></p>';
+}
+</script>
+
+<div id="o_share">
+
+	<a id="o_share_social" href="javascript:;" title="Link auf diese Seite teilen" aria-label="Link auf diese Seite teilen">
+		<i class="o_icon o_icon_share_social o_icon-lg"></i>
+	</a>
+	<div id="o_share_social_wrapper" class="hide"><div id="o_share_social_container">
+			<a id="o_mail" href="javascript: window.location.href='mailto:?subject=' + encodeURIComponent(o_shareSocialTitle()) + '&body=' + encodeURIComponent(o_shareSocialUrl());" title="Link per Mail versenden" aria-label="Link per Mail versenden">
+ 				<i class="o_icon o_icon_mailto o_icon-lg"></i>
+ 			</a>
+	</div></div>
+	<script>
+	jQuery(function() {
+		o_shareLinkPopup('o_share_social', jQuery('#o_share_social_wrapper').html());
+	});
+	</script>
+		<a id="o_link" href="javascript:;" title="Link kopieren" aria-label="Link kopieren">
+			<i class="o_icon o_icon_link o_icon-lg"></i>
+		</a>
+		<a id="o_qrcode" href="javascript:;" title="QR-Code kopieren" aria-label="QR-Code kopieren">
+			<i class="o_icon o_icon_qrcode o_icon-lg"></i>
+		</a>
+		<script>
+		jQuery(function() {
+			o_shareLinkPopup('o_link', o_shareCallout);
+			o_QRCodePopup('o_qrcode', o_shareSocialUrl);
+		});
+		</script>
+		<a id="o_landingpage"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:1218489556:2:1/',false,false,'cid','setLandingPage','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Aktuelle Seite im Profil als pers&ouml;nliche Startseite festlegen" aria-label="Aktuelle Seite im Profil als pers&ouml;nliche Startseite festlegen">
+		<i class="o_icon o_icon_landingpage o_icon-lg"></i>
+	</a>
+</div>
+</div></div>
+</div>
+	<div id="o_footer_impressum">
+		<a class="" target="_blank" id="o_co_footer_dmz_impressum"  href="/auth/1%3A1%3Ao_footer_dmz_impressum%3A1%3A0%3Acid%3Atopnav.impressum%3A_csrf%3A7e0aef2e-7bf1-4111-bb79-c59fe965f0b5/" onclick="return o2cl();"  title="Impressum"><i class='o_icon o_icon_impress o_icon-lg'></i> <span>Impressum</span></a> <script>
+(function(){ var o_co_footer_dmz_impressum = jQuery('#o_co_footer_dmz_impressum');if (o_co_footer_dmz_impressum) o_co_footer_dmz_impressum.click(function() {setTimeout(removeBusyAfterDownload,1200)});})();
+</script>
+	</div>
+	<div id="o_footer_textline">
+		<a  href="https://olat.vcrp.de/docs/datenschutzerklaerung.html" target="_blank" >Datenschutzerklärung</a>
+	</div>
+<div id="o_footer_powered" class="clearfix" aria-hidden="true">
+	<img src="/raw/33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607/images/openolat/openolat_powerd_by_120x30.png" alt="powered by OpenOlat" width="120" height="30" />
+</div>
+<div id="o_footer_version" class="clearfix" aria-hidden="true">
+	<a class="" id="o_comenu_about"  href="javascript:;" onclick="o_XHREvent('/auth/1:1:omenu_about:1:1/',true,true,'cid','about','_csrf','7e0aef2e-7bf1-4111-bb79-c59fe965f0b5'); return false;"  title="Informationen zu OpenOlat Build (33a0b1e:33a0b1e3e5230b2f8e50cad9f85c426b4fa70607)"><span>OpenOlat&nbsp;18.0.7</span></a>
+</div>	
+</div></div>
+	</div>
+</div>
+
+<div id='o_c1218489535'><div id='o_c1218518631'><!-- empty --></div></div>
+<div id='o_c1218489536'><div id='o_c1218518632'><!-- empty --></div></div>
+<div id='o_c1218489537'><div id='o_c1218518633'></div></div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="o_so_md_1218489427" id="o_form_dirty_message" data-nosnippet>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="o_so_md_1218489427">Ungespeicherte Formulardaten</h4>
+      </div>
+      <div class="modal-body">
+      	<p class="o_warning">
+			Achtung! Sie haben noch ungespeicherte Formulardaten
+		</p>
+      	<p>
+			Wenn Sie die Schaltfläche <strong>Daten nicht speichern</strong> drücken verlassen Sie das Formular ohne zu speichern. <strong>Die enthaltenen Änderungen gehen damit verloren</strong>.
+		</p>
+      	<p>
+			Wenn Sie die Schaltfläche <strong>Zurück zum Formular</strong> drücken gelangen Sie zurück zum Formular und können dieses abspeichern. 
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary pull-left o_form_dirty_back" data-dismiss="modal"><i class="o_icon o_icon-fw o_icon_back"> </i>Zurück zum Formular</button>
+        <button type="button" class="btn btn btn-danger o_form_dirty_ignore"><i class="o_icon o_icon-fw o_icon_clear_all"> </i>Daten nicht speichern</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="o_ajax_busy" data-nosnippet>
+	<i class="o_icon o_icon_busy o_icon-5x o_icon-spin"></i>	
+	<div id="o_ajax_progress">
+		<div class="o_label">Daten werden übertragen...</div>
+		<div class="progress"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div></div>
+		<div class="o_progress_info text-muted small"> </div>
+	</div>
+</div>
+
+<div id="o_width_1em" style="width:1em; position: absolute; left: -1000px;" aria-hidden="true"></div>
+<div><script>
+// init size and listen to text resize events
+jQuery(function() {
+	o_initEmPxFactor(); 
+});
+</script></div></body></html>
